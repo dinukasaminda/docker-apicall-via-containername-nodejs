@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  node1:
+    build: ./node1
+    container_name: node1
+    volumes:
+      - ./node1:/usr/src/app
+      - /usr/src/app/node_modules/
+    ports:
+      - 4560:4560
+  node2:
+    build: ./node2
+    container_name: node2
+    volumes:
+      - ./node2:/usr/src/app
+      - /usr/src/app/node_modules/
+    ports:
+      - 4580:4580
